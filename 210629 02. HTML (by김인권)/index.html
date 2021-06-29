@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>2회차 HTML 강의</title>
+		
+		<style>
+			
+			tr, td, th { border : solid 1px #000000; }
+				
+			span { background-color : yellow;
+				width : 100px;
+				height : 100px;
+				margin-top : 100px;
+				margin-bottom : 100px; }
+			h1 { background-color : yellow;
+				width : 100px;
+				height : 100px;
+				margin-top : 100px;
+				margin-bottom : 100px;
+				padding-top : 100px;
+				padding-bottom : 100px; }
+			
+		</style>
+	</head>
+	
+	<body>
+		
+		<form method="post">
+			
+		<!-- label태그, input태그 -->
+			<!-- for속성과 id속성으로 연결 -->
+			<label for="name">이름</label>
+			<input type="text" id="name" placeholder="이름을 입력하세요." required>
+
+			<label for="mail">이메일</label>
+			<input type="email" id="mail" placeholder="이메일을 입력하세요." required>
+
+			<label for="pw">비밀번호</label>
+			<input type="password" id="pw" placeholder="최소 6글자, 최대 12글자" required
+				   minlength="6" maxlength="12">
+
+			<label for="num">숫자</label>
+			<input type="number" id="num" placeholder="숫자만 입력하세요."
+				   min="10" max="50" step="5">
+
+			<label for="upload">파일 업로드</label>
+			<input type="file" id="upload" accept="image/png, image/jpg, image/gif">
+		
+			<button type="submit">제출</button>
+			
+		</form>
+		
+		
+			<!-- checkbox속성값 -->
+			<!-- name속성 : 항목그룹핑
+			 	 value속성 : 서버에 전달되는 데이터값-->
+		<label for="n1">한국</label>
+		<input type="checkbox" id="n1" name="country" value="한국" checked>
+		<label for="n2">일본</label>
+		<input type="checkbox" id="n2" name="country" value="일본" checked>
+		<label for="n3">중국</label>
+		<input type="checkbox" id="n3" name="country" value="중국">
+		
+			<!-- radio속성값 -->
+		<label for="n4">서울</label>
+		<input type="radio" id="n4" name="capital" value="서울" checked>
+		<label for="n5">도쿄</label>
+		<input type="radio" id="n5" name="capital" value="도쿄">
+		<label for="n6">베이징</label>
+		<input type="radio" id="n6" name="capital" value="베이징">
+		
+		
+		<!-- label태그, textarea태그 -->
+		<label for="content">문의내용</label>
+		<textarea id="content" cols="50" rows="5"></textarea>
+		
+		<!-- select태그, option태그 -->
+		<select name="job">
+			<option selected disabled>직업을 선택하세요.</option>
+			<option value="대학생">대학생</option>
+			<option value="직장인">직장인</option>
+			<option value="자영업">자영업</option>
+		</select>
+		
+		
+		<!-- table태그 -->
+		<table>
+			
+			<caption>상품정보</caption>
+			
+			<thead>
+				<tr>
+					<th>상품</th>
+					<th>색상</th>
+					<th>가격</th>					
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>맥북</td>
+					<td>스그</td>
+					<td>5,000원</td>
+				</tr>
+				<tr>
+					<td rowspan="2">아이패드</td>
+					<td>실버</td>
+					<td>1,000원</td>
+				</tr>
+				<tr>
+					<td>골드</td>
+					<td>1,000원</td>
+				</tr>
+			</tbody>
+			
+			<tfoot>
+				<tr>
+					<td colspan="2">총가격</td>
+					<td>7,000원</td>
+				</tr>
+			</tfoot>
+			
+		</table>
+		
+<!-- 공간 만드는 태그 -->
+		<!-- header태그 : 상단 -->
+		<header>
+			
+			<h1>
+				<a href="#">
+					<img>
+				</a>
+			</h1>
+			
+			<nav>
+				<ul>
+					<li><a href="#">메뉴1</a></li>
+					<li><a href="#">메뉴2</a></li>
+					<li><a href="#">메뉴3</a></li>
+				</ul>
+			</nav>
+			
+		</header>
+		
+		<!-- main태그 : 본문 -->
+		<main role="main">
+			
+			<section>
+				<h2>service</h2>
+			</section>
+			
+			<section>
+				<h2>about</h2>
+			</section>
+			
+			<article>
+				<h2>article title</h2>
+				<p>hello nice to meet you. nice to meet you too.</p>
+			</article>
+			
+		</main>
+		
+		<!-- aside태그 : 본문과 관련없는 정보 -->
+		<aside>
+		</aside>
+		
+		<!-- footer태그 : 하단 -->
+		<footer>
+		</footer>
+		
+		<!-- div태그 : 설계도면에 표시할 수 있는 구역 안에서 설계도면에 표현할 수 없는 영역 -->
+		<div>
+		</div>
+		
+		<!-- form태그 : 정보를 입력받는 공간 -->
+		<form>
+			<label></label>
+			<input type="" name="">
+		</form>
+		
+		<!-- inline요소 : 한줄출력, 공간형성X, 상하배치작업X / block요소 : 줄바꿈출력, 공간형성O, 상하배치작업O -->
+		
+		<span>inline</span>
+		<span>inline</span>
+		<span>inline</span>
+		
+		<h1>block</h1>
+		<h1>block</h1>
+		<h1>block</h1>
+		
+	</body>
+</html>
