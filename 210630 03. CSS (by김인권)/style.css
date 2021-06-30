@@ -1,0 +1,67 @@
+/*h1 {font-size : 10px;}*/
+
+header {color : red;}
+header h1,footer h1 {color : blue;}
+header p, footer p {color : green;}
+
+/*
+footer h1 {color : blue}
+footer p {color: green}
+*/
+
+/*type 선택자 : html태그를 기준으로 접근*/
+h1 {color : red}
+
+/*id 선택자 : 태그에 부여된 이름id를 통해 접근 
+#(id속성값) : css에서 id에 접근할 때*/
+#test1 {color : blue}
+
+/*class 선택자 : 태그에 붙여진 별명을 통해 접근
+.(class속성값) : css에서 class에 접근 할 때*/
+.test2 {color : green}
+
+/*attribute(속성) 선택자 : 태그안에 type의 형태를 기준으로 다른 디자인 적용*/
+input [type="text"] {border : solid 10px red;}
+input [type="[password]"] {border : solid blue}
+
+/* id는 한개, class는 여러개*/
+#color-1 {color : red;}
+#font-style-1 {font-style :italic;}
+
+.bg-1 {background-color: red;}
+.font-size-1 {font-size: 50px;}
+
+/*ex*/
+#intro div h2 {color:red;}
+header .class p {color:blue;}
+
+/*Cascading*/
+#color-2 {color : pink}
+.color-22 {color : green;}
+h1 {color : red;}
+h1 {color : blue;}
+
+/*ex2 원본 css코드를 유지하면서 새로운 css코드를 추가하고 싶을 때 cascading 우선순위를 활용*/
+#intro-2 .container-2 h1 {color : pink;}
+#intro-2 div h1 {color : green;}
+#intro-2 h1 {color : blue;}
+header h1 {color : red;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+
+<!-- css 1 -->
+	<!--<style>
+		h1 {color : red;}
+	</style> -->
+	
+<!-- css 3 -->
+	<!-- link태그 : css파일 가져오기
+		rel= : link태그로 연동되는 파일의 타입, "stlyesheet" : 디자인 담당 문서
+		type= : 타입의 속성값이 "연동되는 파일의 글자는 css언어로 구성되어 있다"
+		href= : 연동되는 파일의 경로 -->
+	<link rel="stlyesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+<!-- css 2 -->
+	<!--<h1 style="background-color : pink;">Hello World</h1>-->
+	
+	<!-- css3 -->
+	<header>
+		<h1>header h1</h1>
+		<p>header p</p>
+		<a href="#">네이버</a>
+	</header>
+	
+	<footer>
+		<h1>footer h1</h1>
+		<P>footer p</P>
+	</footer>
+	
+	<!-- 선택자 -->
+	<h1>Hello World</h1>
+	<h2 id="test1">Nice to meet you</h2>
+	<h3 class="test2">Welcome</h3>
+	
+	<input type="text" placeholder="이름">
+	<input type="password" placeholder="비밀번호">
+	
+	<!-- id 선택자와 class 선택자의 차이 -->
+	<h2 id="color-1">id 선택자</h2>
+	<h3 class="bg-1 font-size-1">class 선택자</h3>
+	<p class="bg-1">같은 class 사용 가능</p>
+	<h4 id="color-1">같은 id 사용 불가능</h4>
+	
+	<!-- ex -->
+	<header id="intro">
+		<div class="container">
+			<h2>header h2</h2>
+			<p>header p</p>
+		</div>
+	</header>
+	
+	<p>out p</p>
+	
+	<!-- Cascading : style속성 > id > class > tag -->
+	<h1 style="color : gray" id="color-2" class="color-22">안녕 세상아</h1>
+	
+	<!-- ex -->
+	<header id="intro-2">
+		<div class="container-2">
+			<h1>header h1</h1>
+		</div>
+	</header>	
+
+</body>
+</html>
