@@ -1,0 +1,8 @@
+h1 {color: red;}
+
+/* 파일 경로 설정시 /는 폴더 안으로 ../는 폴더 밖으로 */
+div {
+	width: 500px;
+	height: 400px;
+	background-image: url(../img/sampleimage.png);
+}

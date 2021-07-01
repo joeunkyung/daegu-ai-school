@@ -1,0 +1,72 @@
+.living-lists {
+	list-style: none;
+}
+
+.living-lists .living-items a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.living-lists .living-items a .living-info .type {
+	color: #c08d31;
+	font-weight: 700;
+	font-size: 12px;
+}
+
+.living-lists .living-items a .living-info .title {
+	color: #000000;
+	font-size: 13px;
+}
+
+.living-lists .living-items a .living-info .paragraph {
+	color: #404040;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.living-lists .living-items a .living-info .date-wrap .source,
+.living-lists .living-items a .living-info .date-wrap .date {
+	color: #505050;
+	font-size: 12px;
+}
+
+.living-lists .living-items a .living-info .date-wrap .date {
+	color: gray;
+}
+
+
+
+.living-lists .living-items a:hover .living-info .title {
+	text-decoration: underline;
+}
+.living-lists .living-items:hover {
+	background-color: pink;
+}
+
+.living-lists .living-items a .living-info .date-wrap .date:before {
+	content: '-';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

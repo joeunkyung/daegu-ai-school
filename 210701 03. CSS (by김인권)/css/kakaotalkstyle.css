@@ -1,0 +1,29 @@
+body {background-color: yellow}
+
+.friends-lists {
+	list-style: none;}
+
+.friends-lists .friends-list a {
+	color: #000000;
+	text-decoration : none;}
+
+.friends-lists .friends-list a .friends-thumbnail {
+	border: solid 2px gray;
+	border-radius :  20px; /*원형으로 하고 싶을 땐 50%*/
+}
+
+.friends-lists .friends-list a .friends-info .friends-name {
+	font-size: 20px;
+	color: #000000;
+}
+
+.friends-lists .friends-list a .friends-info .friends-intro {
+	font-size: 15px;
+	color: #c8c8c8;
+}
+
+/* custom */
+.friends-lists .friends-list a .friends-info .friends-intro {
+	font-size: 18px;
+	color: skyblue;
+}
