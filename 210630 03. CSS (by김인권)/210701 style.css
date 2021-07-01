@@ -1,0 +1,70 @@
+/*공간 크기 설정 속성*/
+	/* 속성값의 단위
+	px: 고정값
+	%: 가변값(브라우저 크기에 따라 공간이 리사이즈)
+		가변값의 기준점 : 부모 태그 크기의 상대값
+	opacity: 투명도(0~1사이) */
+div {
+	width: 100%;
+	height: 300px;
+	/* %적용한 속성안에서 사용됨 */
+	min-width: 300px;
+	max-width: 800px;
+	
+	border: solid 10px red;
+	border-radius: 50px;
+	
+	background-color: yellow;
+	
+	opacity:0.5;}
+
+/* font 설정 속성*/
+	/* font-family: 서체
+	font-weight: 서체 굵기
+	text-decoration: 밑줄(underline, line-through, none)
+	text-align: 정렬(left, center, right)*/
+h1 {
+	color: #800000;
+	font-size: 80px;
+	font-style: italic;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 100;
+	text-decoration: underline;
+	text-align: center;
+	background-color: pink;}
+
+a {text-decoration: none;}
+
+/* list 설정 속성 */
+ul {list-style: none;}
+
+/* background 속성*/
+	/* background-repeat: 이미지 반복(repeat-x, repeat-y, no-repeat)
+	background-position: 이미지 위치 조정(left, right, top, bottom, center, right top, right bottom)*/
+#bg {
+	width: 300px;
+	height: 300px;
+	background-color: yellow;
+	background-image: url(sampleimage.png);
+	background-repeat: no-repeat;
+	background-position: top left;}
+
+/* 가상 선택자 */
+	/* 행동에 의해
+	:link: 방문 안한 링크의 디자인 적용
+	:active: 클릭한 순간 링크의 디자인
+	:hover: 커서를 올린 순간 링크의 디자인
+	:focus: input 박스에 focus했을 때*/
+a:link {color: red;}
+a:active {color: blue;}
+a:hover{color: pink;}
+input:focus{border: solid 10px red;}
+	/* 규칙에 의해 */
+li:first-child {color: red;}
+li:last-child {color: blue;}
+li:nth-child(2) {color: grey;}
+li:nth-child(2n+1) {color: pink;}
+	/* :before: 열린 태그와 글자 사이 공간
+	after: 글자와 닫힌 태그 사이 */
+li:before {content:"❤♡";}
+li:after {content:"♡❤"}
