@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- box model: 웹사이트 제작시 레이아웃의 구조(공백 등)을 파악할 수 있도록 도와주는 옵션, 좌표 배치 작업시 공백으로 사용
+1. margin: border기준 바깥쪽
+2. padding: border기준 안쪽
+3. border: 
+4. content: 열린태그와 닫힌태그 안의 내용물-->
+	
+	<div class="box-model">Hello Kitty</div>
+	
+	<!-- margin 병합 현상: 웹사이트 레이아웃 제작시 나타는 문제,
+1. 형제간 margin 병합 현상
+2. 부모자식간 margin 병합 현상 -->
+	
+	<div class="margin-one"></div>
+	<div class="margin-two"></div>
+	
+	<div class="margin-parent">
+		<div class="margin-child">
+		</div>
+	</div>
+	
+	<!-- display 속성: block요소를 inline요소로 바꾸거나 inline요소를 block요소로 바꿀때 사용
+inline-block속성값: x축정렬 & 공간형성, 상하배치작업-->
+	<h1>Block</h1>
+	<h1>Block</h1>
+	<h1>Block</h1>
+	
+	<span>Inline</span>
+	<span>Inline</span>
+	<span>Inline</span>
+	
+	<!-- vertical-align 속성 : inline 요소에만 적용 가능 -->
+	<span class="inline">inline</span>
+	<span class="inline-block">inline-block</span>
+	<img src="https://via.placeholder.com/100">
+	
+	<!-- position 속성 : 선택한 영역을 2차원으로 만들지 3차원으로 만들지 결정짓는 속성값, 웹사이트 제작은 2차원(평면)과 3차원(레이어)을 혼합
+1. static 속성값 1)O 2)X 3)O => 2차원
+2. fixed 속성값 1)X 2)O(원래 위치가 아니라 브라우저 좌상단 기준으로 움직임) 3)X => 3차원
+3. relative 속성값 1)O 2)O(원래 위치를 기준으로 움직임, 공백없이 주체적으로 움직임) 3)O => 2차원+3차원 혼합형
+4. absolute 속성값 1)X 2)O(원래 위치가 아니라 브라우저 좌상단 기준으로 움직임 but 부모의 position상태에 따라 좌표 기준점 달라져서 부모가 3차원 position상태면 원래 위치를 기준으로 움직임) 3)X => 3차원
+
+1) margin-top 사용시 부모 자식간에 발생하는 마진 병합 현상이 일어나는지 => 2차원O, 3차원X
+2) top, right, bottom, left 속성을 사용할 수 있는지 => 2차원X, 3차원O
+3) 자식의 높이 값이 부모의 높이값에 영향을 주는지 => 2차원O, 3차원X
+-->
+	
+	<div class="static-parent">
+		<div class="static-child">
+		</div>
+	</div>
+	
+	<div class="box1"></div>
+	<div class="fixed-parent">
+		<div class="fixed-child">
+		</div>
+	</div>
+	<div class="box2"></div>
+	
+	<div class="box3"></div>
+	<div class="relative-parent">
+		<div class="relative-child">
+		</div>
+	</div>
+	
+	<div class="box4"></div>
+	<div class="=absolute-parent">
+		<div class="absolute-child">
+		</div>
+	</div>
+	
+</body>	
+</html>

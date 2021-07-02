@@ -1,0 +1,180 @@
+/* html, body태그의 태생적인 공백 없애기 */
+html, body{
+	margin:0;
+	padding:0;
+}
+
+.box-model {
+	
+	width: 200px;
+	height: 200px;
+	background-color: silver;
+	border: solid 10px hotpink;
+
+	/* padding 사용하면서 공간에 대한 크기는 유지하고 싶다 = border,padding 속성 적용해도 width, height에 딱맞게 세팅됨*/
+	box-sizing: border-box;
+	padding: 100px 0 0 100px;
+	
+	/*	코드 한줄 작성 시 시계방향
+	margin: 100px 0 0 100px;
+	padding: 100px 0 0 100px;
+	
+	margin-top:100px;
+	margin-right:;
+	margin-bottom:;
+	margin-left:100px;
+	
+	padding-top:100px;
+	padding-right:;
+	padding-bottom:;
+	padding-left:100px;*/
+}
+
+/* margin-one의 margin-bottom 100px 과
+margin-two의 margin-top 50px을 서로 공유중, 큰값 100px이 작은값 50px을 병합함*/
+.margin-one {
+	width: 100%;
+	height: 100px;
+	background-color: red;
+	margin-bottom :100px;
+}
+.margin-two {
+	width: 100%;
+	height: 100px;
+	background-color: blue;
+	margin-top: 50px;
+}
+
+/* margin-chil의 margin-top 100px으로 margin-parent까지 margin-top 100px됨 */
+.margin-parent {
+	width: 300px;
+	height: 300px;
+	background-color: yellow;
+}
+.margin-child {
+	width: 150px;
+	height: 150px;
+	background-color: gold;
+	margin-top:100px;
+	
+	position: absolute;
+}
+
+/* display 속성 */
+/* h1 {
+	display: inline;
+	
+	width: 100px;
+	height: 100px;
+	background-color: pink;
+	
+	margin-top: 100px;
+}
+
+span {
+	display: block;
+	
+	width: 100px;
+	height: 100px;
+	background-color: skyblue;
+	
+	margin-top: 100px;
+}
+*/
+
+/* vertical-align 속성 */
+.inline, .inline-block, img {
+	vertical-align: bottom;
+}
+
+.inline-block {
+	display: inline-block;
+	
+	width: 100px;
+	height: 100px;
+	background-color: orangered;
+}
+
+/* position 속성 */
+.static-parent {
+	width: 300px;
+	/* height: 300px; */
+	background-color: yellow;
+}
+.static-child {
+	position: static;
+	
+	width: 150px;
+	height: 150px;
+	background-color: gold;
+	/* margin-top:100px; */
+	/* top: 100px; */
+}
+
+.box1 {
+	width: 300px;
+	height: 200px;
+	background-color: yellowgreen;
+}
+.fixed-parent {	
+	width: 300px;
+	/* height: 300px; */
+	background-color: green;
+}
+.fixed-child {	
+	position: fixed;
+	
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	
+	/* margin-top: 100px; */
+	/* top: 100px; */
+}
+.box2 {
+	width: 300px;
+	height: 2000px;
+	background-color: brown;
+}
+
+.box3 {
+	width: 300px;
+	height: 200px;
+	background-color: yellowgreen;
+}
+.relative-parent {	
+	width: 300px;
+	/* height: 300px; */
+	background-color: green;
+}
+.relative-child {	
+	position: relative;
+	
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	
+	/* margin-top: 100px; */
+	/* top: 100px; */
+}
+
+.box4 {
+	width: 300px;
+	height: 200px;
+	background-color: yellowgreen;
+}
+.absolute-parent {	
+	width: 300px;
+	/* height: 300px; */
+	background-color: green;
+}
+.absolute-child {	
+	position: absolute;
+	
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	
+	/* margin-top: 100px; */
+	/* top: 100px; */
+}
