@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- z-index: (숫자);는 z축의 높이에 영향을 미치는 속성으로 z축의 위치 조정 가능(속성값으로 단위는 생략됨, z축이 있는 3차원 영역에서만 사용 가능)
+
+*형제관계에서 3차원 성격의 position 속성값을 사용하면 레이어가 겹치는 현상 발생
+1. 1번째 형제에만 position: absolute 적용하면 1번째 레이어가 위로 겹침O
+2. 2번째 형제에만 position: absolute 적용하면 레이어 겹침X
+3. 1번째 2번째 형제 모두 position: absolute 적용하면 2번째 형제의 레이어가 위로 겹침O
+--> 
+	<div class="z-1"></div>
+	<div class="z-2"></div>
+	
+	<!-- float: (left, right);는 display속성 없이 선택한 영역을 x축으로 정렬 & 브라우저 기준 왼쪽 오른쪽 배치
+	clear: both;는 float 기능 끌 때
+
+float 사용 주의 사항
+1-1. float을 사용한 영역을 고정값(px)으로 설정하면, float을 사용한 영역 부모의 width크기도 고정값이어야 하고 float을 지정한 영역들의 합보다 크거나 같아야 한다.(그렇지 않으면 브라우저 width크기를 바꾸면 레이어가 틀어짐)
+1-2. float을 사용한 영역을 가변값(%)으로 설정하면, float을 사용한 영역 부모의 width크기가 가변값이어도 레이어가 틀어지지 않는다.
+2. float을 사용한 영역은 그 영역의 높이값이 부모에게 영향을 주지 않는다. (float이 3차원적 특징)
+3. float을 사용한 영역의 position은 static or relative이어야 한다. (순수 3차원인 fixed or absolute이면 안된다)
+
+float 실무 사용 팁
+1. class="clearfix"로 html 구조, float 위치 빠르게 파악
+2. float을 사용한 영역의 부모에게 overflow: hidden;을 사용하여, 자식의 높이값이 부모에게 영향을 주게 할 수 있다. (overflow: hidden;은 box공간의 크기보다 분량이 많아졌을 때 사용하여 box공간을 벗어나는 object는 감춰짐)
+-->
+	<div class="left-1"></div>
+	<div class="right-1"></div>
+	
+	<header></header>
+		<section>
+			<div class="left-2"></div>
+			<div class="center-2"></div>
+			<div class="right-2"></div>
+		</section>
+	<div class="clearfix"></div>
+	<footer></footer>
+	
+	<div class="over-box">
+		<p> I got my peaches out in Georgia (oh, yeah, shit) I get my weed from California (that's that shit) I took my chick up to the North, yeah (badass bitch) I get my light right from the source, yeah (yeah, that's it) And I see you (oh), the way I breathe you in (in), it's the texture of your skin I wanna wrap my arms around you, baby, never let you go, oh And I say, oh, there's nothing like your touch It's the way you lift me up, yeah And I'll be right here with you 'til the end</p>
+	</div>
+	
+	<!-- display: flex;로 지정된 부모의 자식들을 정렬함, float보다 효과적, 효율적으로 배치 작업
+flex-direction: (row, row-reverse, column, column-reverse);로 (x축 왼쪽 정렬, x축 오른쪽 역순 정렬, y축 왼쪽 정렬, y축 왼쪽 역순 정렬) 할 수 있다.
+flex-wrap: (nowrap, wrap);은 (부모의 영역을 벗어나지 않도록 자식의 크기를 자동으로 리사이징, 자식의 크기가 부모의 영역을 벗어나면 자동으로 줄바꿈)
+flex-flow: ;는 direction과 wrap을 동시에 지정할 때 사용
+justify-content: (flex-start, center, flex-end, space-between, space-around);는 (x축 왼쪽 정렬, x축 가운데 정렬, x축 오른쪽 정렬, 균일한 간격 정렬, 양쪽끝 포함 균일한 간격 정렬)함
+align-items: (flex-start, center, flex-end, baseline);는 (y축 윗쪽 정렬, y축 가운데 정렬, y축 아랫쪽 정렬, 박스간 아래줄 정렬)함
+-->
+	<div class="container">
+		<div class="item one"></div>
+		<div class="item two"></div>
+		<div class="item three"></div>
+	</div>
+	
+	<!-- 중앙 정렬
+1. margin: 0 auto;는 상하 0px, 좌우 자동 으로 맞추겠다는 의미
+2. position: relative; & left: 50%;는 box 왼쪽면 기준 중앙 이동, 따라서 margin-left: (width의 반);만큼 해줘야 한다. 단, 공간의 넓이 바뀌면 margin-left값도 수정해야 한다.
+-->
+	<div class="center-3"></div>
+	<div class="center-4"></div>
+	<div class="center-5"></div>
+	
+</body>	
+</html>
