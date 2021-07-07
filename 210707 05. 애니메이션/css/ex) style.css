@@ -1,0 +1,230 @@
+html, body{
+	margin:0;
+	padding:0;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+
+
+
+
+/* 실습 1 */
+.mouse-animation li {
+	width: 250px;
+	/* background-color: #000000; */
+	background-color: rgba(0, 0, 0, 1);
+	padding: 20px;
+	border-top: solid 5px #dfdfdf;
+	
+	transition: opacity 0.5s, margin-left 0.5s;
+}
+.mouse-animation li:hover {
+	/* opacity: 0.5; */ /* 글자까지 투명도 영향 끼치므로 rgba 사용 권장 */
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-left: 10px;
+}
+.mouse-animation li a {
+	color: red;
+	font-size: 20px;
+}
+
+
+
+
+
+/* 실습 2 */
+.move-box {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	
+	animation-name: MoVeBoX;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	
+	animation-play-state: running; /* 속성값 paused 해두면 멈춤 */
+	animation-fill-mode: backwards; /* 0%에 지정된 속성값으로 최초 상태를 표현한다, 여기서는 배경색상이 파랑이 아니라 빨강으로 표현*/
+}
+@keyframes MoVeBoX {
+	0% {
+		background-color: red;
+		left: 0;
+		top: 0;
+	}
+	25% {
+		background-color: orange;
+		left: 100px;
+		top: 0;
+	}
+	50% {
+		background-color: yellow;
+		left: 100px;
+		top: 100px;
+		border-radius: 50%;
+	}
+	75% {
+		background-color: pink;
+		left: 0;
+		top: 100px;
+	}
+	100% {
+		background-color: red;
+		left: 0;
+		top: 0;
+	}
+}
+
+
+
+
+
+/* 실습 3 */
+.outer-border {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 200px;
+	height: 200px;
+	border: solid 15px red;
+	border-radius: 50%;
+	
+	margin: 0 auto; /* 상하0, 좌우auto 배치로 중앙 정렬 */
+	margin-top: 200px;
+	
+	animation: OuTeRbOrDeR 2s infinite;
+}
+@keyframes OuTeRbOrDeR {
+	0% { border-color: red; transform: scale(1); }
+	25% { border-color: orange; transform: scale(1.2); }
+	50% { border-color: yellow; transform: scale(1.3); }
+	75% { border-color: yellowgreen; transform: scale(1.2); }
+	100% { border-color: pink; transform: scale(1); }
+	/* scale 적용 영역의 자식까지 영향 끼침 */
+}
+
+.inner-border {
+	box-sizing: border-box; /* width, height 넘지 않도록 형성 */
+	width: 80px;
+	height: 80px;
+	border: solid 10px pink;
+	
+	animation: InNeRbOrDeR 2s infinite alternate;
+}
+@keyframes InNeRbOrDeR {
+	0% { transform: rotate(0deg); }
+	25% { border-color: purple; border-width: 20px; }
+	50% { border-color: blue; border-width: 30px; }
+	75% { border-color: blueviolet; border-width: 40px; }
+	100% { transform: rotate(360deg); border-width: 10px; }
+}
+
+
+
+
+
+/* 실습 4 */
+.mario-container {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	border: solid 10px black;
+	
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+.mario-container .mario-coin {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background-color: gold;
+	border-radius: 50%;
+	
+	margin: 0 auto;
+	margin-top: 100px;
+	animation: JuMpCoIn 0.5s linear infinite;
+}
+@keyframes JuMpCoIn {
+	0% { transform: translateY(0px); opacity: 1;}
+	50% { transform: translateY(-100px) rotateY(180deg); opacity: 0; }
+	100% { transform: translateY(-100px) rotateY(360deg); opacity: 0; }
+}
+
+.mario-container .mario-box {
+	width: 100px;
+	height: 100px;
+	background-color: brown;
+	
+	margin: 0 auto;
+	
+	animation: JuMpBoX 1s linear infinite alternate;
+}
+@keyframes JuMpBoX {
+	0% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+	100% { transform: translateY(0px); }
+}
+
+
+
+
+
+/* 실습 5 */
+.hover-image {
+	cursor: pointer; /* 커서가 포인터로 바뀌어 이벤트 암시 */
+	overflow: hidden;
+	position: relative;
+	width: 500px;
+	border: solid 10px #000000;
+}
+
+.hover-image img {
+	width: 100%;
+	vertical-align: middle; /* img의 태생적인 공백 제거 */
+	transition: transform 0.3s linear;
+}
+.hover-image:hover img {
+	transform: scale(1.5);
+}
+
+.hover-image .image-info {
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+	
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	
+	left: 0;
+	bottom: -85px;
+	
+	transition: bottom 0.3s linear;
+}
+.hover-image:hover .image-info {
+	bottom: 0;
+}
+
+
+.hover-image .image-info h2,
+.hover-image .image-info p {
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}
+.hover-image .image-info h2 {
+	font-size: 20px;
+}
+.hover-image .image-info p {
+	font-size: 15px;
+}

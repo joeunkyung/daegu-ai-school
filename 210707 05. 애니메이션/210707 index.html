@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- transform
+transform: rotate(숫자deg);는 선택한 영역의 각도 조절 (2차원적(평면적) 회전 효과 적용)
+transform: scew(숫자deg, 숫자deg);는 선택한 영역의 각도 조절 (3차원적 회전 효과 적용)
+transform: scale(숫자, 숫자);은 선택한 영역의 크기에 숫자를 곱하여 크기를 확대, 축소
+transform: translate(숫자px, 숫자px);는 선택한 영역의 위치 변경
+
+transform 주의 사항
+익스플로러10.0 버전의 하위 버전에서 구현하기 위해 prefix(-브라우저-)를 사용해야 한다
+-->
+	<div class="transform"></div>
+	
+<!-- transition 애니메이션이 변화하는 과정을 보여주는 효과 (코드 하나로 작성시, 순서는 상관 없지만 duration, delay는 차례대로 작성한다 / 다른 속성을 추가할 땐 쉼표를 사용한다) 
+transition-property: (속성);는 변화하려는 영역
+transition-duration: (숫자)s;은 애니메이션이 진행되는 총 시간
+transition-timing-function: ();은 움직이는 애니메이션 속도의 빠르기를 지정
+transition-delay: (숫자)s;는 애니메이션이 시작하기 전 시간
+-->
+	<div class="transition"></div>
+	
+<!-- animation 자동 애니메이션 효과 (코드 하나로 작성시, 순서는 상관 없지만 duration, delay는 차례대로 작성한다)
+animation-name: ();은 이름 설정
+animation-duration: (숫자)s;은 애니메이션이 진행되는 총 시간
+animation-timing-function: linear;은 애니메이션 속도의 빠르기를 지정
+animation-delay: (숫자)s;는 애니메이션이 시작하기 전 시간
+animation-iteration-count: (숫자);는 애니메이션의 진행 횟수 *infinite는 계속 진행
+animation-direction: (normal, alternate, );은 애니메이션의 진행 방향이 각각 (정방향, 왕복)
+
+@keyframes (animation-name 속성값) { from or 0%{} to or 100%{} }으로 애니메이션 설정 연동하여 애니메이션이 발동하는 형태의 값을 입력
+
+animation 주의 사항
+익스플로러10.0 버전의 하위 버전에서 구현하기 위해 prefix(-브라우저-)를 사용할 때는 연동된 keyframes에도 prefix(@-브라우저-keyframes)를 사용해야 한다
+-->
+	<div class="animation"></div>
+	
+	<!-- 연습 -->
+	<div class="spin-lion"></div>
+		
+</body>	
+</html>

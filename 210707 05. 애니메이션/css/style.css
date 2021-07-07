@@ -1,0 +1,103 @@
+html, body{
+	margin:0;
+	padding:0;
+}
+
+.transform {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	
+/* prefix */
+	/* -webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg); */
+
+	/* transform: rotate(45deg); */
+	/* transform: scale(0.5, 0.5); */
+	/* transform: skew(-10deg, 20deg); */
+	/* transform: translate(100px, 300px); */
+}
+
+
+
+
+
+.transition {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	
+	transition: width 2s linear 1s, height 2s linear 1s;
+	/* transition-property: width;
+	transition-duration: 2s;
+	transition-timing-function: linear;
+	transition-delay: 1s; */
+}
+.transition:hover {
+	width: 300px;
+	height: 300px;
+}
+
+
+
+
+.animation {
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+	
+	animation: ChAnGeWiDtH 3s linear 1s 6 alternate;
+	/* animation-name: ChAnGeWiDtH;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	animation-iteration-count: 6;
+	animation-direction: alternate; */
+}
+@keyframes ChAnGeWiDtH {
+	0% {
+		width: 100px;
+		height: 100px;
+		background-color: purple;
+	}
+	50% {
+		background-color: whitesmoke;
+	}
+	100% {
+		width: 300px;
+		height: 300px;
+		background-color: violet;
+		border: solid 5px pink;
+	}
+}
+
+.spin-lion {
+	width: 100px;
+	height: 100px;
+	background-color: grey;
+	-webkit-animation: SpInLiOn 1500ms linear infinite alternate;
+	animation: SpInLiOn 1500ms linear infinite alternate;
+	/* animation-name: SpInLiOn;
+	animation-duration: 1500ms;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate; */
+}
+@-webkit-keyframes SpInLiOn {
+	from {
+		-webkit-transform: rotate(-10deg)
+	}
+	to {
+		-webkit-transform: rotate(10deg)
+	}
+}
+@keyframes SpInLiOn {
+	from {
+		transform: rotate(-10deg)
+	}
+	to {
+		transform: rotate(10deg)
+	}
+}
