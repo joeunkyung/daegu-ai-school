@@ -1,0 +1,10 @@
+html, body{
+	margin:0;
+	padding:0;
+	
+}
+
+.animate__animated {
+	margin-top: 50px;
+	margin-left: 100px;
+}
