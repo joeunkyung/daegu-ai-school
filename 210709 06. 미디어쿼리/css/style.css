@@ -1,0 +1,76 @@
+html, body, h1{
+	margin:0;
+	padding:0;
+	
+}
+
+/* 미디어 쿼리
+미디어 쿼리는 모바일, 태블릿 환경에 맞는 변화를 줄때 사용되는 css코드로 width값의 크기를 기준으로 분기점을 설정
+320px  ~  767px : 스마트폰
+768px  ~ 1023px : 태블릿
+1024px ~        : pc 
+
+미디어 쿼리 주의사항
+1. 미디어쿼리 바깥쪽 코드가 미디어쿼리 안쪽에도 상속된다.
+2. 반드시 html파일에 <meta name="viewport" content="width=device-width, initial-scale=1.0">코드를 작성해야 한다. (웹사이트 크기를 사용자 기기 화면 비율에 맞게 자동으로 스케일업 해주는 역할)
+
+미디어 쿼리 실무사용팁
+1. display: none;과 미디어 쿼리 결합
+2. 모바일 버전, 태블릿 버전, pc 버전 순으로 제작하는 게 쉽다. (단순 -> 복잡) 
+
+참고) media query standard device로 기기별 width 확인 가능
+참고) awwwards
+*/
+.pc {
+	color: red;
+	font-size: 50px;
+	background-color: pink;
+}
+.mobile {
+	display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+	.pc {
+		display: none;
+		
+		color: green;
+		font-size: 20px;
+		background-color: yellowgreen;
+	}
+	.mobile {
+		display: block;
+	}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+	.pc {
+		color: blue;
+		font-size: 20px;
+		background-color: skyblue;
+	}
+}
+
+
+
+
+
+/* 미디어 쿼리 응용
+max-width 1024px 미만 자동 설정으로 순서대로 스마트폰, 태블릿, pc 버전이 됨
+*/
+	
+.ex {
+	font-size: 20px;
+	background-color: yellow;
+}
+@media (min-width: 768px) {
+	.ex {
+		font-size: 30px;
+		background-color: skyblue;
+	}
+}
+@media (min-width: 1024px) {
+	.ex {
+		font-size: 40px;
+		background-color: pink;
+	}
+}
