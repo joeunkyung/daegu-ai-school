@@ -1,0 +1,303 @@
+/* Default CSS */
+* {
+	margin: 0;
+	padding: 0;
+	
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	
+	font-family: sans-serif;
+	color: #585858;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: 400;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	vertical-align: middle
+}
+
+span {
+	display: block;
+}
+
+
+
+
+
+/* header */
+#header h1 {
+	background-color: beige;
+}
+
+#header h1 .logo {
+	position: relative;
+	display: block;
+	
+	width: 100%;
+	height: 65px;
+}
+
+#header h1 .logo img {
+	position: absolute;
+	
+	top: 0;
+	margin-top: 23px;
+	
+	left: 50%;
+	margin-left: -93px;
+}
+
+#header .buttons ul {
+	overflow: hidden; /* 자식의 높이값 포함하기 위해서 */
+}
+
+#header .buttons ul li {
+	position: relative;
+	float: left;
+	
+	width: 33.33%;
+	height: 65px;
+	/* border: solid 5px red; */
+}
+#header .buttons ul li .menu-button {
+	display: block;
+	
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#header .buttons ul li:nth-child(1) .menu-button {
+	background-color: #f9f9f9
+}
+#header .buttons ul li:nth-child(2) .menu-button {
+	background-color: #d3d3d3;
+}
+#header .buttons ul li:nth-child(3) .menu-button {
+	background-color: #939393;
+}
+
+#header .buttons ul li .menu-button img {
+	position: relative;
+	height: 20px;
+	
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+@media (min-width: 47em /* =752px, 1em = 16px */) {
+	#header {
+		position: fixed;
+		width: 100%;
+		height: 80px;
+		
+		top: 0;
+		left: 0;
+		
+		z-index: 999999;
+	}
+	
+	#header h1 {
+		width: 50%;
+	}
+	
+	#header h1 .logo {
+		width: 280px;
+		height: 80px;
+	}
+	
+	#header h1 .logo img {
+		margin-top: 30px;
+	}
+	
+	#header .buttons {
+		position: absolute;
+		width: 50%;
+		
+		left: 50%;
+		top: 0;
+	}
+	
+	#header .buttons ul li {
+		height: 80px;
+	}
+}
+
+
+
+
+
+/* main */
+.main-content .product-group-link {
+	position: relative;
+	display: block;
+	float: left;
+	
+	width: 100%;
+	height: 56.25%;
+	border: solid 2px red;
+	
+	overflow: hidden;
+}
+
+.main-content .product-group-link img {
+	width: 100%;
+	height: 100%;
+}
+
+.main-content .product-group-link .link-text {
+	position: absolute;
+	
+	left: 25px;
+	bottom: 25px;
+	
+	color: black;
+	font-size: 25px;
+}
+
+
+@media (min-width: 47em) {
+	.main-content {
+		padding-top: 80px;
+	}
+}
+
+@media (min-width: 60em) {
+	.main-content {
+		overflow: hidden; /* 높이값 잡기 위해 */
+	}
+	
+	.main-content .product-group-link {
+		width: 50%;
+		height: 28.125%;
+	}
+}
+
+
+
+
+
+/* footer */
+#footer {
+	position: relative;
+	background-color: #f9f9f9;
+	
+	padding-bottom: 66px;
+}
+
+#footer .left-nav {
+	padding-top: 20px;
+	text-align: center;
+}
+
+#footer .left-nav li {
+	padding: 5px 0;
+}
+
+#footer .right-nav {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#footer .right-nav li {
+	display: inline-block;
+	padding: 7px 4px;
+}
+
+#footer .right-nav .payment-icon {
+	display: inline-block;
+	
+	width: 30px;
+	height: 20px;
+}
+
+#footer .right-nav .payment-icon.one {
+	background-color: black;
+}
+#footer .right-nav .payment-icon.two {
+	background-color: red;
+}
+#footer .right-nav .payment-icon.three {
+	background-color: pink;
+}
+#footer .right-nav .payment-icon.four {
+	background-color: blue;
+}
+#footer .right-nav .payment-icon.five {
+	background-color: grey;
+}
+
+#footer .to-top-button {
+	position: absolute;
+	display: block;
+	
+	width: 66px;
+	height: 66px;
+	background-color: yellow;
+	
+	bottom: 0;
+	left: 50%;
+	margin-left: -33px;
+}
+
+
+@media (min-width: 60em) {
+	#footer .left-nav {
+		float: left;
+		
+		width: 50%;
+		text-align: left;
+		
+		padding-top: 32px;
+		padding-left: 40px;
+	}
+	
+	#footer .right-nav {
+		float: right;
+		
+		width: 50%;
+		text-align: right;
+		
+		margin: 0;
+		padding-top: 32px;
+		padding-right: 40px;
+	}
+	
+	#footer ul, #footer li, #footer h3 {
+		display: inline-block;
+		vertical-align: middle; /* y축 중앙 정렬 */
+	}
+	
+	#footer .left-nav a {
+		font-size: 14px;
+		padding: 0 5px;
+	}
+	
+	#footer .right-nav li {
+		padding: 0 4px;
+	}
+	
+	#footer h3 {
+		padding-right: 10px;
+	}
+}
