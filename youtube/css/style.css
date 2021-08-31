@@ -407,17 +407,19 @@ input:focus {
 
 
 
-/* CHANNEL Default CSS */
+/* CHANNEL */
 .channel-container {
 	width: 1284px;
 	margin: 0 auto;
 }
+
 
 #youtube-channel-content #channel-banner {
 	width: 100%;
 	height: 250px;
 	background-color: darkblue;
 }
+
 
 #youtube-channel-content #channel-header {
 	padding: 16px 0 4px;
@@ -436,7 +438,7 @@ input:focus {
 	width: 80px;	
 	height: 80px;
 	border-radius: 50%;
-
+	
 	margin-right: 24px;
 }
 
@@ -446,13 +448,13 @@ input:focus {
 
 #youtube-channel-content #channel-header .channel-profile-wrap .channel-profile .txt-wrap h2 {
 	font-size: 25px;
-	color: #ffffff;
 	font-weight: 500;
+	color: #ffffff;
 }
 
 #youtube-channel-content #channel-header .channel-profile-wrap .channel-profile .txt-wrap p {
-	color: #aaaaaa;
 	font-size: 14px;
+	color: #aaaaaa;
 	margin-top: 5px;
 }
 
@@ -461,9 +463,10 @@ input:focus {
 	background-color: red;
 	border-radius: 5px;
 
-	color: #ffffff;
 	font-size: 16px;
+	color: #ffffff;
 }
+
 
 #channel-nav {
 	background-color: rgba(24, 24, 24, 1);
@@ -480,11 +483,8 @@ input:focus {
 #channel-nav li a {
 	display: block;
 	height: 47px;
-
-	padding: 0 32px;
-
 	line-height: 47px;
-
+	padding: 0 32px;
 	border-bottom: solid 2px transparent;
 	color: #aaaaaa;
 }
@@ -535,9 +535,9 @@ input:focus {
 }
 
 #channel-recent .txt-wrap h2 {
-	font-size: 24px;	
-	color: #ffffff;
+	font-size: 24px;
 	font-weight: 400;
+	color: #ffffff;
 }
 
 #channel-recent .txt-wrap .channel {
@@ -551,8 +551,6 @@ input:focus {
 	color: #aaaaaa;
 	line-height: 1.45;
 }
-
-
 
 
 .channel-playlists-section {
@@ -668,7 +666,7 @@ input:focus {
 
 
 
-/* 탐색 페이지 */
+/* EXPLORE */
 .explore-container {
 	width: 1280px;
 	margin: 0 auto;
@@ -700,7 +698,7 @@ input:focus {
 }
 
 #explore-nav li a:hover {
-	background-color: darkgrey;
+	background-color: black;
 }
 
 #explore-nav li .icon {
@@ -716,7 +714,6 @@ input:focus {
 	color: #ffffff;
 	font-size: 16px;
 }
-
 
 
 #popular-section {
