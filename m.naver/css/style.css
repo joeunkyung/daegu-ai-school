@@ -608,3 +608,269 @@ input:focus {
 	font-weight: 400;
 	color: #03c95b;	
 }
+
+
+
+
+
+/* talk */
+#talk {
+	padding: 20px 0;
+}
+
+#talk ul {
+	overflow: hidden; /* float 사용해서 자식의 높이값 인식시키려고 */
+}
+
+#talk ul li {
+	position: relative;
+	width: 277px;
+	background-color: #ffffff;
+	box-shadow: 0 1px 6px 0 rgba(0 0 0 / 6%), 0 1px 0 rgb(0 0 0 / 2%);
+	padding: 15px 0 15px;
+	margin-bottom: 12px;
+}
+
+#talk ul li:last-child {
+	margin-bottom: 0;
+}
+
+#talk ul li a {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	
+	color: #000000;
+	
+	padding: 0 20px;
+}
+
+#talk ul li .icon-arrow {
+	display: inline-block;
+	width: 20px;
+	height: 16px;
+}
+
+#talk ul li .content-wrap .txt-wrap h3 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+#talk ul li .content-wrap .txt-wrap p {
+	font-size: 13px;
+	line-height: 16px;
+	margin-top: 4px;
+}
+
+#talk ul li img {
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+}
+
+
+#talk ul .left-list {
+	float: left;
+	
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+}
+
+#talk ul .left-list .icon-arrow-left {
+	background-color: purple;
+}
+
+#talk ul .left-list .content-wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+}
+
+#talk ul .left-list .content-wrap .txt-wrap {
+	
+}
+
+#talk ul .left-list .content-wrap .txt-wrap h3 {
+	color: purple;
+}
+
+#talk ul .left-list .content-wrap img {
+	margin-left: 8px;
+}
+
+
+#talk ul .right-list {
+	float: right;
+	
+	border-top-left-radius: 40px;
+	border-bottom-left-radius: 40px;
+}
+
+#talk ul .right-list .icon-arrow-right {
+	background-color: #0ac666;
+}
+
+#talk ul .right-list .content-wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+}
+
+#talk ul .right-list .content-wrap .txt-wrap {
+	
+}
+
+#talk ul .right-list .content-wrap .txt-wrap h3 {
+	color: #0ac666;
+}
+
+#talk ul .right-list .content-wrap img {
+	margin-right: 8px;
+}
+
+
+
+
+
+/* today */
+#today {
+	padding: 10px;
+}
+
+#today .container {
+	padding: 0 20px;
+}
+
+#today .content-header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	
+	border-top: solid 1px #e0e4ea;
+	padding-top: 24px;
+	margin-bottom: 10px;
+}
+
+#today .content-header h2 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#today .content-header a {
+	font-size: 14px;
+	font-weight: 400;
+	color: #767678;
+	
+}
+
+#today .content-body {
+	overflow: hidden;
+	width: 100%;
+	border-radius: 8px;
+	background-color: #ffffff;
+	box-shadow: 0 1px 6px 0 rgb(0 0 0 / 6%), 0 1px 0 0 rgb(0 0 0 / 2%);
+}
+
+#today .content-body img {
+	width: 100%;
+}
+
+#today .content-body .bottom-wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	
+	padding: 14px 13px 12px 15px;
+}
+
+#today .content-body .bottom-wrap i {
+	display: block;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	background-color: purple;
+	
+	margin-right: 8px;
+}
+
+#today .content-body .bottom-wrap .txt-wrap {
+	
+}
+
+#today .content-body .bottom-wrap .txt-wrap h3 {
+	font-size: 15px;
+	font-weight: 600;
+}
+
+#today .content-body .bottom-wrap .txt-wrap p {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 16px;
+	color: #929294;	
+}
+
+
+
+
+
+/* footer */
+#footer {
+	padding: 35px 0 80px;
+}
+
+#footer .txt-wrap {
+	text-align: center;
+}
+
+#footer .txt-wrap a {
+	position: relative;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 400;
+	color: #929294;
+	letter-spacing: -0.5px;
+	padding: 3px 9px;
+}
+
+#footer .txt-wrap .link a:before {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 1px;
+	height: 10px;
+	background-color: #d7dfe7;
+	
+	top: 7px;
+	left: 0;
+}
+
+#footer .txt-wrap .link a:first-child:before{
+	content: none;
+}
+
+#footer h1 {
+	text-align: center;
+}
+
+#footer h1 a {
+	
+}
+
+#footer h1 a img {
+	width: 74px;
+}
